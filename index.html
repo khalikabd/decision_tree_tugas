@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diagnosa Penyakit Dalam - Metode C 4.5</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <img src="assets/img/decision-tree.png" alt="decision tree logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="data-latih.php"><i class="fas fa-table"></i> Data Latih</a>
+                </li>
+                <li>
+                    <a href="perhitungan.php"><i class="fas fa-burn"></i> Entropy & Gain</a>
+                </li>
+                <li>
+                    <a href="decision-tree.php"><i class="fas fa-sitemap"></i> Pohon Keputusan</a>
+                </li>
+                <li>
+                    <a href="data-uji.php"><i class="fas fa-table"></i> Data Uji</a>
+                </li>
+                <li>
+                    <a href="uji.php"><i class="fas fa-file-alt"></i> Pengujian</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="body" class="">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <h2 class="page-title">Diagnosa Penyakit Dalam - Metode C4.5 Decision Tree</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="mb-0 btn btn-square btn-lg btn-info">Daftar Penyakit</h5>
+                                        
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        <table class="table table-striped">
+                                            
+                                            <tbody>
+                                                <tr>
+                                                    <td>Gastritis (Maag)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dispepsia</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GERD</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="btn btn-square btn-lg btn-info">Daftar Gejala</h5>
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        <table class="table table-striped">
+                                            <thead class="success">
+                                                <tr>
+                                                    <th>Nama Gejala</th>
+                                                    <th class="text-end">Variabel</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Mual</td><td class="text-end">X1</td></tr>
+                                                <tr><td>Muntah</td><td class="text-end">X2</td></tr>
+                                                <tr><td>Nyeri pada hati</td><td class="text-end">X3</td></tr>
+                                                <tr><td>Nafsu makan berkurang</td><td class="text-end">X4</td></tr>
+                                                <tr><td>Mulut terasa pahit</td><td class="text-end">X5</td></tr>
+                                                <tr><td>Sering bersendawa</td><td class="text-end">X6</td></tr>
+                                                <tr><td>Regurgitas</td><td class="text-end">X7</td></tr>
+                                                <tr><td>Kembung</td><td class="text-end">X8</td></tr>
+                                                <tr><td>Perut terasa penuh</td><td class="text-end">X9</td></tr>
+                                                <tr><td>Cepat kenyang</td><td class="text-end">X10</td></tr>
+                                                <tr><td>Mengeluarkan gas asam dari mulut</td><td class="text-end">X11</td></tr>
+                                                <tr><td>Nyeri dibelakang tulang dada</td><td class="text-end">X12</td></tr>
+                                                <tr><td>Suara serak</td><td class="text-end">X13</td></tr>
+                                                <tr><td>Penurunan berat badan</td><td class="text-end">X14</td></tr>
+                                                <tr><td>Sesak pada bagian tengah atas perut</td><td class="text-end">X15</td></tr>
+                                                <tr><td>Perasaan panas di dada dan perut</td><td class="text-end">X16</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chartsjs/Chart.min.js"></script>
+    <script src="assets/js/dashboard-charts.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
